@@ -141,20 +141,21 @@ Here’s an example of how they integrate logically:
 #### Reference Architecture: Unified Data Pipeline + Arcserve
 **Architecture Layers (End-to-End)**
 
-**[ Source Systems ]**
-   |  (OLTP, APIs, ERP, Payments)
-   |—— Arcserve Backup (immutable, versioned)
-   **↓**
-**[ Raw Data Zone ]**
-   |—— Snapshots + Retention
-   **↓**
-**[ Unified Data Pipeline ]**
-   |  Apache Spark / ETL / Validation
-   |—— Config + Metadata Backups
+```text
+[ Source Systems ]
+  |  (OLTP, APIs, ERP, Payments)
+  |-- Arcserve Backup (immutable, versioned)
   **↓**
-**[ Curated / Financial Data Zone ]**
-   |—— Replication + DR
-   **↓**
+[ Raw Data Zone ]
+  |-- Snapshots + Retention
+  **↓**
+[ Unified Data Pipeline ]
+  |  Apache Spark / ETL / Validation
+  |-- Config + Metadata Backups
+  **↓**
+[ Curated / Financial Data Zone ]
+  |-- Replication + DR
+  **↓**
 [ BI, Finance, Reporting ]
 
 ---
