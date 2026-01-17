@@ -145,17 +145,17 @@ Here’s an example of how they integrate logically:
 [ Source Systems ]
   |  (OLTP, APIs, ERP, Payments)
   |-- Arcserve Backup (immutable, versioned)
-  **↓**
+  ↓
 [ Raw Data Zone ]
   |-- Snapshots + Retention
-  **↓**
+  ↓
 [ Unified Data Pipeline ]
   |  Apache Spark / ETL / Validation
   |-- Config + Metadata Backups
-  **↓**
+  ↓
 [ Curated / Financial Data Zone ]
   |-- Replication + DR
-  **↓**
+  ↓
 [ BI, Finance, Reporting ]
 
 ```
