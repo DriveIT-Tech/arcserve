@@ -158,6 +158,7 @@ Here’s an example of how they integrate logically:
   **↓**
 [ BI, Finance, Reporting ]
 
+```
 ---
 
 ## End-to-End Unified Data Pipeline Flow (Top → Bottom)
